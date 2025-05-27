@@ -1,0 +1,49 @@
+## Visual Studio 临时文件
+.vs/
+[Bb]in/
+[Oo]bj/
+
+# 用户特定文件
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 构建结果
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 缓存/选项目录
+.vs/
+.vscode/
+# 非必要的 ReSharper 缓存
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# NuGet 包
+*.nupkg
+# NuGet Symbol 包
+*.snupkg
+# 项目的包可以下载
+**/[Pp]ackages/*
+# 但 package.json 的 packages 文件夹需要源代码控制
+!**/[Pp]ackages/build/
+# 忽略生成的 nupkg 文件的 project.json
+*.nuget.props
+*.nuget.targets
+
+# 其他常见的忽略项
+*.log
+.DS_Store
+Thumbs.db 

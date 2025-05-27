@@ -6,19 +6,17 @@
 3. 导航到保存文件的目录。
 
 4. 编译代码：
-   - 如果你有 .NET SDK（推荐）：
-     csc Program.cs QueryStringParser.cs
-   - 这将创建一个可执行文件（如，Windows下的Program.exe或其他系统下的Program）。
+   - 使用 .NET 8.0 SDK：
+     dotnet build
+   - 这将创建一个可执行文件。
 
 5. 运行可执行文件：
-   - Windows: Program.exe
-   - macOS/Linux: ./Program
+   - 使用 .NET CLI: dotnet run
+   - 或直接运行生成的可执行文件
 
-示例（使用.NET SDK）：
+示例（使用.NET CLI）：
   cd 文件路径
-  csc Program.cs QueryStringParser.cs
-  ./Program 
-  (或Windows下的Program.exe)
+  dotnet run
 
 预期输出：
 程序将打印解析多个示例查询字符串的结果，
