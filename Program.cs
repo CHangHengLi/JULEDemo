@@ -1,96 +1,108 @@
 /*
-To compile and run this program:
+要编译并运行此程序：
 
-1. Save `QueryStringParser.cs` and `Program.cs` in the same directory.
-2. Open a command prompt or terminal.
-3. Navigate to the directory where you saved the files.
+1. 将 `QueryStringParser.cs` 和 `Program.cs` 保存在同一目录中。
+2. 打开命令提示符或终端。
+3. 导航到保存文件的目录。
 
-4. Compile the code:
-   - If you have .NET SDK (recommended):
+4. 编译代码：
+   - 如果你有 .NET SDK（推荐）：
      csc Program.cs QueryStringParser.cs
-   - This will create an executable file (e.g., Program.exe or Program, depending on your OS).
+   - 这将创建一个可执行文件（如，Windows下的Program.exe或其他系统下的Program）。
 
-5. Run the executable:
+5. 运行可执行文件：
    - Windows: Program.exe
    - macOS/Linux: ./Program
 
-Example (using .NET SDK):
-  cd path/to/your/files
+示例（使用.NET SDK）：
+  cd 文件路径
   csc Program.cs QueryStringParser.cs
   ./Program 
-  (or Program.exe on Windows)
+  (或Windows下的Program.exe)
 
-Expected Output:
-The program will print the results of parsing several example query strings,
-showing the key-value pairs extracted by the QueryStringParser.
+预期输出：
+程序将打印解析多个示例查询字符串的结果，
+显示由QueryStringParser提取的键值对。
 */
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// 主程序类
+/// </summary>
 public class Program
 {
+    /// <summary>
+    /// 程序入口点
+    /// </summary>
+    /// <param name="args">命令行参数</param>
     public static void Main(string[] args)
     {
-        Console.WriteLine("Query String Parser Demo");
+        Console.WriteLine("查询字符串解析器演示");
         Console.WriteLine("------------------------");
 
-        // Example 1: Basic query string
+        // 示例1：基本查询字符串
         string queryString1 = "name=JohnDoe&age=30&city=NewYork";
-        Console.WriteLine($"\nParsing: \"{queryString1}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString1}\"");
         Dictionary<string, string> parsed1 = QueryStringParser.ParseQueryString(queryString1);
         PrintDictionary(parsed1);
 
-        // Example 2: Query string with a leading '?'
+        // 示例2：带有前导'?'的查询字符串
         string queryString2 = "?product=Laptop&price=1200&available=true";
-        Console.WriteLine($"\nParsing: \"{queryString2}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString2}\"");
         Dictionary<string, string> parsed2 = QueryStringParser.ParseQueryString(queryString2);
         PrintDictionary(parsed2);
 
-        // Example 3: Query string with URL encoded characters
+        // 示例3：包含URL编码字符的查询字符串
         string queryString3 = "search=C%23%20Programming&category=Development";
-        Console.WriteLine($"\nParsing: \"{queryString3}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString3}\"");
         Dictionary<string, string> parsed3 = QueryStringParser.ParseQueryString(queryString3);
         PrintDictionary(parsed3);
 
-        // Example 4: Query string with empty values and parameters without values
+        // 示例4：包含空值和无值参数的查询字符串
         string queryString4 = "name=Alice&id=&status=active&isAdmin";
-        Console.WriteLine($"\nParsing: \"{queryString4}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString4}\"");
         Dictionary<string, string> parsed4 = QueryStringParser.ParseQueryString(queryString4);
         PrintDictionary(parsed4);
         
-        // Example 5: Empty query string
+        // 示例5：空查询字符串
         string queryString5 = "";
-        Console.WriteLine($"\nParsing: \"{queryString5}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString5}\"");
         Dictionary<string, string> parsed5 = QueryStringParser.ParseQueryString(queryString5);
         PrintDictionary(parsed5);
 
-        // Example 6: Query string with only '?'
+        // 示例6：只有'?'的查询字符串
         string queryString6 = "?";
-        Console.WriteLine($"\nParsing: \"{queryString6}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString6}\"");
         Dictionary<string, string> parsed6 = QueryStringParser.ParseQueryString(queryString6);
         PrintDictionary(parsed6);
 
-        // Example 7: Query string with special characters
+        // 示例7：包含特殊字符的查询字符串
         string queryString7 = "email=test%40example.com&message=Hello%20World%21";
-        Console.WriteLine($"\nParsing: \"{queryString7}\"");
+        Console.WriteLine($"\n正在解析: \"{queryString7}\"");
         Dictionary<string, string> parsed7 = QueryStringParser.ParseQueryString(queryString7);
         PrintDictionary(parsed7);
 
-        Console.WriteLine("\nDemo finished. Press any key to exit.");
+        // 显示明显的退出提示
+        Console.WriteLine("\n演示结束。按任意键退出...");
+        Console.WriteLine("(如果窗口自动关闭，请在命令行中运行程序)");
         Console.ReadKey();
     }
 
-    // Helper method to print dictionary contents
+    /// <summary>
+    /// 辅助方法：打印字典内容
+    /// </summary>
+    /// <param name="dict">要打印的字典</param>
     public static void PrintDictionary(Dictionary<string, string> dict)
     {
         if (dict.Count == 0)
         {
-            Console.WriteLine("  (empty dictionary)");
+            Console.WriteLine("  (空字典)");
             return;
         }
         foreach (var kvp in dict)
         {
-            Console.WriteLine($"  Key: \"{kvp.Key}\", Value: \"{kvp.Value}\"");
+            Console.WriteLine($"  键: \"{kvp.Key}\", 值: \"{kvp.Value}\"");
         }
     }
 }

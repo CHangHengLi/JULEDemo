@@ -1,0 +1,15 @@
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\bin\Debug\net6.0\JULEDemo.exe
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\bin\Debug\net6.0\JULEDemo.deps.json
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\bin\Debug\net6.0\JULEDemo.runtimeconfig.json
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\bin\Debug\net6.0\JULEDemo.dll
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\bin\Debug\net6.0\JULEDemo.pdb
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.AssemblyInfoInputs.cache
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.AssemblyInfo.cs
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.csproj.CoreCompileInputs.cache
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.sourcelink.json
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.dll
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\refint\JULEDemo.dll
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.pdb
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\JULEDemo.genruntimeconfig.cache
+C:\Users\CHangHeng\Desktop\杂项\JULEDemo\obj\Debug\net6.0\ref\JULEDemo.dll
