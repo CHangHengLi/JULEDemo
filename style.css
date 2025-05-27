@@ -27,10 +27,11 @@ main {
 
 /* Styles for section titles */
 .blog-recommendation h2,
+.recent-posts h2, /* Added .recent-posts h2 */
 .description h2 {
     color: #333;
     text-align: center;
-    margin-bottom: 1.5rem; /* Increased margin a bit */
+    margin-bottom: 1.5rem;
 }
 
 /* Styles for the blog recommendation card */
@@ -76,12 +77,55 @@ main {
     color: white;
 }
 
+/* Styles for the recent posts section */
+.recent-posts {
+    background: #fff; /* Give it a background like other cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto; /* Consistent margin with blog-card and description */
+    width: 70%; /* Consistent width with blog-card */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-list li {
+    padding: 0.75rem 0; /* Add some padding above and below each list item */
+    border-bottom: 1px solid #eee; /* Separator line */
+}
+
+.post-list li:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.post-list li a {
+    text-decoration: none;
+    color: #0056b3; /* Consistent link color with .blog-link */
+    font-weight: 500; /* Slightly bolder than normal text */
+    transition: color 0.2s ease-in-out;
+}
+
+.post-list li a:hover,
+.post-list li a:focus {
+    color: #007bff; /* Darker or brighter on hover */
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
 .description {
     background: #fff;
     padding: 1.5rem;
     border-radius: 8px; /* Consistent rounding */
     margin-top: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow */
+    width: 70%; /* Consistent width with blog-card and recent-posts */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -92,20 +136,33 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive adjustments for the blog card if needed, though 70% auto margin might be fine */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .blog-card {
-        width: 90%; /* More width on smaller screens */
+    .blog-card,
+    .recent-posts,
+    .description {
+        width: 90%;
         padding: 1rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .blog-card {
-        width: 95%; /* Almost full width on very small screens */
+    .blog-card,
+    .recent-posts,
+    .description {
+        width: 95%;
         padding: 1rem;
     }
     .blog-card h3 {
         font-size: 1.2rem;
+    }
+    .recent-posts h2 { /* Specific for recent-posts h2 if it needs different sizing than description h2 */
+        font-size: 1.3rem; 
+    }
+    .description h2 { /* Ensure description h2 also has a responsive size if needed */
+        font-size: 1.3rem;
+    }
+    .post-list li a {
+        font-size: 0.95rem;
     }
 }
