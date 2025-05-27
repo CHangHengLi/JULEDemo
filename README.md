@@ -25,7 +25,7 @@
 
 一旦项目通过 GitHub Pages 部署，您可以通过以下链接访问：
 
-[此处将填写您的 GitHub Pages 链接，例如：https://your-username.github.io/your-repository-name/]
+[https://changhengli.github.io/JULEDemo/](https://changhengli.github.io/JULEDemo/)
 
 (请在 GitHub 仓库的 Settings > Pages 中完成部署后，将上面的链接替换为实际链接。)
 
