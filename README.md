@@ -1,8 +1,8 @@
-# 前端网页 Demo
+# 简单博客推荐页面
 
 ## 项目描述
 
-这是一个基础的前端网页 Demo，包含了 HTML, CSS, 和 JavaScript 文件。它旨在演示一个简单的网页结构，包含一个角色展示区域和一些基本样式。
+这是一个简单的前端网页，用于展示一个博客推荐。它使用了基础的 HTML, CSS, 和 JavaScript。当前页面推荐的是 O_____V_____O 的 CSDN 博客。
 
 ## 技术栈
 
@@ -24,3 +24,5 @@
 [此处将填写您的 GitHub Pages 链接，例如：https://your-username.github.io/your-repository-name/]
 
 (请在 GitHub 仓库的 Settings > Pages 中完成部署后，将上面的链接替换为实际链接。)
+
+页面的内容是一个简单的博客推荐。

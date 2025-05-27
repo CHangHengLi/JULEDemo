@@ -1,13 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const characterCards = document.querySelectorAll('.character-card');
+    // The previous event listeners for '.character-card' have been removed
+    // as they are no longer applicable to the blog recommendation page.
 
-    characterCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const characterName = card.querySelector('p').textContent;
-            alert(`你点击了：${characterName}`);
-        });
-    });
-
-    // You can add more JavaScript interactions here if needed.
-    console.log('JavaScript file loaded and executed.');
+    // You can add new JavaScript interactions here if needed for the blog page.
+    console.log('JavaScript file loaded and executed. Ready for new interactions if any.');
 });

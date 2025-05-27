@@ -22,51 +22,66 @@ main {
     padding: 1rem;
     max-width: 1100px;
     margin: auto;
-    overflow: auto;
+    overflow: auto; /* To contain floats or margins */
 }
 
-.character-gallery h2,
+/* Styles for section titles */
+.blog-recommendation h2,
 .description h2 {
     color: #333;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Increased margin a bit */
 }
 
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Distribute space around items */
-    gap: 1rem; /* Space between cards */
+/* Styles for the blog recommendation card */
+.blog-recommendation {
+    margin-bottom: 2rem; /* Space below the recommendation section */
 }
 
-.character-card {
+.blog-card {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
+    border-radius: 8px; /* Slightly more rounded */
+    padding: 1.5rem 2rem; /* More padding */
     text-align: center;
-    width: calc(33.333% - 2rem); /* Aim for 3 cards per row, accounting for gap */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    margin-bottom: 1rem; /* Space below cards if they wrap */
+    width: 70%; /* Take up more width */
+    margin: 0 auto 1rem auto; /* Center the card and add bottom margin */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a subtle shadow */
 }
 
-.character-card img {
-    max-width: 100%;
-    height: auto;
+.blog-card h3 {
+    margin-top: 0;
+    color: #0056b3; /* A blueish color for the title */
+}
+
+.blog-card p {
+    margin: 0.5rem 0 1rem 0; /* Adjusted margins for paragraph */
+    font-size: 1rem;
+}
+
+.blog-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.character-card p {
-    margin: 0.5rem 0 0;
-    font-weight: bold;
+.blog-link:hover,
+.blog-link:focus {
+    background-color: #0056b3;
+    color: white;
 }
 
 .description {
     background: #fff;
     padding: 1.5rem;
-    border-radius: 5px;
+    border-radius: 8px; /* Consistent rounding */
     margin-top: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow */
 }
 
 footer {
@@ -77,15 +92,20 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for the blog card if needed, though 70% auto margin might be fine */
 @media (max-width: 768px) {
-    .character-card {
-        width: calc(50% - 2rem); /* 2 cards per row on medium screens */
+    .blog-card {
+        width: 90%; /* More width on smaller screens */
+        padding: 1rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .character-card {
-        width: 100%; /* 1 card per row on small screens */
+    .blog-card {
+        width: 95%; /* Almost full width on very small screens */
+        padding: 1rem;
+    }
+    .blog-card h3 {
+        font-size: 1.2rem;
     }
 }
